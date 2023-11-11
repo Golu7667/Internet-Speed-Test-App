@@ -26,9 +26,9 @@ const NetSpeed = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Network Speed Test</h1>
-      {speed ? <p>Your network speed is: {speed} Mbps</p> : <p>Calculating speed...</p>}
+    <div style={{textAlign:'center',marginTop:'200px',fontWeight:'bold',}}>
+      <h1 style={{marginBottom:'10px',color:'black',fontFamily:'fantasy',fontSize:'3rem'}}>Network Speed Test</h1>
+      {speed ? <p style={{marginBottom:'10px',color:'green',}} >Your network speed is: <span style={{fontSize:'3rem'}}>{speed} Mbps</span></p> : <p  style={{marginBottom:'10px',color:'green'}}>Calculating speed...</p>}
     </div>
   );
 };
