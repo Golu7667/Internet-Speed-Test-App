@@ -20,7 +20,7 @@ const NetSpeed: React.FC = () => {
         setSpeed(speedMbps);
       };
 
-      img.src = 'https://i.postimg.cc/wqSPTCjr/DSC-7764.jpg/800x400?text=First slide&bg=373940'; // Replace with an image URL hosted on a server
+      img.src = 'https://user-images.githubusercontent.com/103061012/282237984-dc090cc2-021e-44e6-aed1-b9a65df06e80.PNG'; // Replace with an image URL hosted on a server
     };
 
     calculateSpeed();
