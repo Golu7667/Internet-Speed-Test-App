@@ -1,8 +1,8 @@
 "use client"
 import { useState, useEffect } from 'react';
 
-const NetSpeed = () => {
-  const [speed, setSpeed] = useState(null);
+const NetSpeed: React.FC = () => {
+  const [speed, setSpeed] = useState<string | null>(null);
 
   useEffect(() => {
     const calculateSpeed = () => {
@@ -26,9 +26,15 @@ const NetSpeed = () => {
   }, []);
 
   return (
-    <div style={{textAlign:'center',marginTop:'200px',fontWeight:'bold',}}>
-      <h1 style={{marginBottom:'10px',color:'black',fontFamily:'fantasy',fontSize:'3rem'}}>Network Speed Test</h1>
-      {speed ? <p style={{marginBottom:'10px',color:'green',}} >Your network speed is: <span style={{fontSize:'3rem'}}>{speed} Mbps</span></p> : <p  style={{marginBottom:'10px',color:'green'}}>Calculating speed...</p>}
+    <div style={{ textAlign: 'center', marginTop: '200px', fontWeight: 'bold' }}>
+      <h1 style={{ marginBottom: '10px', color: 'black', fontFamily: 'fantasy', fontSize: '3rem' }}>Network Speed Test</h1>
+      {speed ? (
+        <p style={{ marginBottom: '10px', color: 'green' }}>
+          Your network speed is: <span style={{ fontSize: '3rem' }}>{speed} Mbps</span>
+        </p>
+      ) : (
+        <p style={{ marginBottom: '10px', color: 'green' }}>Calculating speed...</p>
+      )}
     </div>
   );
 };
